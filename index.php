@@ -6,8 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        echo "Hello, World! My name is Giancarlo. I'm learning PHP.";
-    ?>
-</body>
+        <?php
+        echo "Hello, this is a paragraph in PHP.";
+        ?>
+        <p>Hello there, this is also a paragraph, but in HTML.</p>
+
+        <?php 
+            // Scalar type variables (contains one value)
+            $name = "Giancarlo Acevedo";
+            $string = "my name is";
+            $int = 20;
+            echo "So, " . $string . " " . $name . " and I am " . $int . " years old.";
+
+            // Array type variable (contains multiple values)
+            $colors = ["Red", "Green", "Blue", "Yellow"];
+            echo " My favorite colors are: " . $colors[0] . " and " . $colors[1];
+        ?>
+
+    </body>
 </html>
