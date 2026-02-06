@@ -6,22 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-        <?php
-        echo "Hello, this is a paragraph in PHP.";
-        ?>
-        <p>Hello there, this is also a paragraph, but in HTML.</p>
+    <form action="index.php" method="post">
+       <p><strong>Price calculator</strong></p>
+        <label name="item">Item:</label>
+        <input type="text" name="item">
 
-        <?php 
-            // Scalar type variables (contains one value)
-            $name = "Giancarlo Acevedo";
-            $string = "my name is";
-            $int = 20;
-            echo "So, " . $string . " " . $name . " and I am " . $int . " years old.";
+        <br>
 
-            // Array type variable (contains multiple values)
-            $colors = ["Red", "Green", "Blue", "Yellow"];
-            echo " My favorite colors are: " . $colors[0] . " and " . $colors[1];
-        ?>
+        <label name="quantity">Quantity:</label>
+        <input type="number" name="quantity">
 
-    </body>
+        <br>
+
+        <label name="price">Price:</label>
+        <input type="text" name="price">
+
+        <br>
+
+        <input type="submit" value="Calculate">
+    </form>
+</body>
 </html>
+
+<?php
+        $item = $_POST['item'];
+        $quantity = $_POST['quantity'];
+        $price = $_POST['price'];
+
+        $totalPrice = $quantity * $price;
+        echo "<p>You have purchased $quantity $item/s for a total price of: $$totalPrice</p>";
+?>
