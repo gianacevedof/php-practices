@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <form action="loops.php" method="post">
+    <form action="while_loops.php" method="post">
        <h2><strong>Number counter</strong></h2>
 
         <label name="number">Please, enter a number to count to:</label>
@@ -21,11 +21,11 @@
         <?php
             $number = $_POST["number"];
             for ($i = 1; $i <= $number; $i++) {
-                echo "{$i} ";
+                echo "{$i} <br>";
             }
         ?>
 
-        <br><br>
+        <br>
 
         <label name="number_r">Now, enter a number to count to in reverse:</label>
         <br>
@@ -34,11 +34,11 @@
         <?php
             $number_r = $_POST["number_r"];
             for ($i = $number_r; $i > 0; $i--) {
-                echo "{$i} ";
+                echo "{$i} <br>";
             }
         ?>
 
-        <br><br>
+        <br>
         <input type="submit" value="Start">
     </form>
 </body>
